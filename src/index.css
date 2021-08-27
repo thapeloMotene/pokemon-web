@@ -1,0 +1,105 @@
+
+  @import '~@clr/ui/clr-ui.min.css';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+padding: 0;
+background: #efefef;
+}
+
+.home-jumbotron{
+  background-image: url("./assets/img/bg-main-jumbotron.jpeg");
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  padding: 0px !important;
+  background-color: black;
+
+}
+
+.cover{
+  height: inherit;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+.box {
+  position: relative;
+  margin: 40px auto;
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 40%;
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(0,0,0,.7);
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.box::before {
+  left: 15px;
+  transform: skew(-5deg) rotate(-5deg);
+}
+
+.box::after {
+  right: 15px;
+  transform: skew(5deg) rotate(5deg);
+}
+
+.box:hover::before,
+.box:hover::after {
+  box-shadow: 0 2px 14px rgba(0,0,0,.4);
+}
+
+.box:hover::before {
+  left: 5px;
+}
+
+.box:hover::after {
+  right: 5px;
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 400;
+}
+
+.input-search{
+  height: 50px;
+  width: 450px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  background-color: transparent;
+  padding-right: 40px;
+  color:#fff;
+}
+
+.input-search::placeholder{
+  color:#fff !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
